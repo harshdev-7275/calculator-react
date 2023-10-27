@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-function Digit({value}) {
-    console.log(value);
+function Digit({ value, onClick }) {
   return (
-    <li className='border border-black rounded-lg bg-white'>{value}</li>
-  )
+    <li
+      className='border border-black rounded-lg bg-white p-3'
+      onClick={() => onClick(value)}
+    >
+      {value}
+    </li>
+  );
 }
 
-export default Digit
+export default Digit;
